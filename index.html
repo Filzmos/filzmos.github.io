@@ -200,6 +200,13 @@
     .member-body { padding: 1.25rem 1.4rem 1.5rem; }
     .member h3 { margin: 0 0 .35rem; font: 700 1.2rem/1.2 var(--mono); }
     .member p { margin: 0; color: var(--muted); }
+    .member-focus { margin-top: .7rem !important; font-size: .86rem; line-height: 1.55; }
+    .project-overview { display:grid; grid-template-columns: repeat(4, 1fr); gap:.8rem; margin: 0 0 1.25rem; }
+    .overview-stat { border:1px solid var(--line); border-radius:18px; padding:1rem 1.1rem; background:rgba(255,255,255,.72); }
+    .overview-stat strong { display:block; font:700 1.35rem/1.1 var(--mono); color:var(--blue-900); }
+    .overview-stat span { display:block; margin-top:.35rem; color:var(--muted); font-size:.8rem; }
+    .imprint-card a { color: var(--blue-700); font-weight:700; text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 680px) { .project-overview { grid-template-columns: repeat(2, 1fr); } }
 
     .imprint { background: linear-gradient(145deg, #eaf7fb, #f8f7ff); }
     .imprint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
@@ -317,9 +324,9 @@
       <div class="orbit two" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div data-reveal>
-          <div class="eyebrow">Diplomarbeit · Enterprise Networking</div>
+          <div class="eyebrow">Diplomarbeit · HTL 3 Rennweg · Enterprise Networking</div>
           <h1>Path of <span>Noesis</span></h1>
-          <p>Eine interaktive Netzwerkumgebung, in der Routing, Switching, Security, SDN, VPN, Fabric und Services nicht nur konfiguriert, sondern als zusammenhängende Enterprise-Architektur verstanden werden.</p>
+          <p>Path of Noesis ist eine praxisnahe Diplomarbeit der HTL 3 Rennweg. Ziel ist eine zusammenhängende Enterprise-Netzwerkumgebung, in der Routing, Switching, Security, SDN, VPN, Fabric und Services nicht isoliert, sondern als Bestandteile einer gemeinsamen Architektur betrachtet und verstanden werden.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#topologie">Topologie erkunden →</a>
             <a class="btn" href="#projekt">Projekt ansehen</a>
@@ -337,7 +344,13 @@
       <div class="container">
         <div class="section-title" data-reveal>
           <div><div class="eyebrow">01 · Projekt</div><h2>Von Grundlagen zur Tiefe.</h2></div>
-          <p>Der Stil übernimmt die klare, großzügige Präsentationssprache der Vorlage: viel Weißraum, technische Motive, Monospace-Typografie und starke Blau-Cyan-Violett-Akzente.</p>
+          <p>Die Diplomarbeit verbindet theoretische Netzwerkkonzepte mit einer vollständig nachvollziehbaren, praxisorientierten Laborumgebung. Die Topologie bildet mehrere Standorte und eine Provider-Anbindung in einer gemeinsamen Architektur ab.</p>
+        </div>
+        <div class="project-overview" data-reveal aria-label="Projektüberblick">
+          <div class="overview-stat"><strong>4</strong><span>Bereiche · 3 Standorte + ISP</span></div>
+          <div class="overview-stat"><strong>107</strong><span>Geräte in der aktuellen Topologie</span></div>
+          <div class="overview-stat"><strong>177</strong><span>Verbindungen in der CML-Umgebung</span></div>
+          <div class="overview-stat"><strong>CML</strong><span>Virtuelle Netzwerkumgebung</span></div>
         </div>
         <div class="project-cards">
           <article class="project-card" data-index="1.1" data-reveal>
@@ -352,6 +365,16 @@
               <span class="tag">Routing</span><span class="tag">Switching</span><span class="tag">Security</span><span class="tag">SDN</span><span class="tag">VPN</span><span class="tag">Fabric</span><span class="tag">Services</span>
             </div>
           </article>
+          <article class="project-card" data-index="1.3" data-reveal>
+            <h3>1.3. Projektziel</h3>
+            <p>Die Umgebung soll Lernenden ermöglichen, Enterprise-Netzwerktechnologien in einer realitätsnahen Gesamtarchitektur zu untersuchen. Statt einzelne Konfigurationen isoliert zu betrachten, werden Abhängigkeiten, Übergänge und das Zusammenspiel der einzelnen Netzwerkbereiche sichtbar gemacht.</p>
+            <div class="tag-row"><span class="tag">Praxisnah</span><span class="tag">Modular</span><span class="tag">Dokumentiert</span><span class="tag">Erweiterbar</span></div>
+          </article>
+          <article class="project-card" data-index="1.4" data-reveal>
+            <h3>1.4. Umsetzung</h3>
+            <p>Die einzelnen Technologien werden in Cisco Modeling Labs (CML) aufgebaut, konfiguriert und dokumentiert. Die Gesamttopologie dient dabei als gemeinsame Referenz für die vier Bereiche Standort 1, Standort 2, Standort 3 und ISP. Durch die interaktive Webdarstellung können Geräte, Verbindungen und Standorte gezielt erkundet werden.</p>
+            <div class="tag-row"><span class="tag">Cisco Modeling Labs</span><span class="tag">Enterprise</span><span class="tag">Topologie</span><span class="tag">Dokumentation</span></div>
+          </article>
         </div>
       </div>
     </section>
@@ -360,7 +383,7 @@
       <div class="container">
         <div class="section-title" data-reveal>
           <div><div class="eyebrow">02 · Interaktiv</div><h2>Gesamte Topologie</h2></div>
-          <p>Die Ansicht basiert auf der aktuellen CML-Datei. Alle Geräte bleiben sichtbar, die Bereiche sind sauber getrennt und jedes Gerät wird nun mit den von dir bereitgestellten Gerätebildern plus Namen angezeigt.</p>
+          <p>Die interaktive Ansicht basiert auf der aktuellen CML-Gesamttopologie. Alle Geräte bleiben sichtbar, die vier Bereiche sind getrennt anwählbar und jedes Gerät kann für technische Standardinformationen geöffnet werden.</p>
         </div>
         <div class="topology-shell" data-reveal>
           <div class="map-wrap" id="mapWrap">
@@ -408,14 +431,14 @@
     <section id="team">
       <div class="container">
         <div class="section-title" data-reveal>
-          <div><div class="eyebrow">03 · Menschen</div><h2>Team</h2></div>
-          <p>Vier Platzhalterprofile für das Projektteam: Projektleiter, stellvertretender Projektleiter und zwei Teammitglieder. Namen, Fotos und Kontaktlinks können direkt ersetzt werden.</p>
+          <div><div class="eyebrow">03 · Team</div><h2>Vier Köpfe.</h2></div>
+          <p>Das Projekt wird von einem vierköpfigen Team der HTL 3 Rennweg umgesetzt. Die Rollen bilden Projektleitung, Stellvertretung und die technische Mitarbeit innerhalb der Diplomarbeit ab.</p>
         </div>
         <div class="team-grid">
-          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Projektleiter"></div><div class="member-body"><h3>Vorname Nachname</h3><p>Projektleiter</p></div></article>
-          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Stellvertretender Projektleiter"></div><div class="member-body"><h3>Vorname Nachname</h3><p>Stv. Projektleiter</p></div></article>
-          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Teammitglied"></div><div class="member-body"><h3>Vorname Nachname</h3><p>Teammitglied</p></div></article>
-          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Teammitglied"></div><div class="member-body"><h3>Vorname Nachname</h3><p>Teammitglied</p></div></article>
+          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Alexander Filzmoser"></div><div class="member-body"><h3>Alexander Filzmoser</h3><p>Projektleiter</p><p class="member-focus">Projektkoordination · Gesamtüberblick · Abstimmung der Arbeitspakete</p></div></article>
+          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Mario Rogner"></div><div class="member-body"><h3>Mario Rogner</h3><p>Stv. Projektleiter</p><p class="member-focus">Technische Koordination · Unterstützung der Projektleitung · Dokumentation</p></div></article>
+          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Michaela Gregorova"></div><div class="member-body"><h3>Michaela Gregorova</h3><p>Teammitglied</p><p class="member-focus">Mitarbeit an Aufbau, Konfiguration und Analyse der Enterprise-Umgebung</p></div></article>
+          <article class="member" data-reveal><div class="portrait" aria-label="Platzhalterportrait Lena Freistetter"></div><div class="member-body"><h3>Lena Freistetter</h3><p>Teammitglied</p><p class="member-focus">Mitarbeit an Aufbau, Konfiguration und Dokumentation der Gesamtarchitektur</p></div></article>
         </div>
       </div>
     </section>
@@ -423,18 +446,28 @@
     <section class="imprint" id="impressum">
       <div class="container">
         <div class="section-title" data-reveal>
-          <div><div class="eyebrow">04 · Rechtliches</div><h2>Impressum</h2></div>
-          <p>Die folgenden Angaben sind Platzhalter und müssen vor Veröffentlichung durch vollständige, rechtlich geprüfte Informationen ersetzt werden.</p>
+          <div><div class="eyebrow">04 · Rechtliches</div><h2>Impressum.</h2></div>
+          <p>Die Website dokumentiert eine Diplomarbeit der HTL 3 Rennweg. Für die schulischen Kontaktdaten werden die offiziellen Angaben der Schule verwendet; private Kontaktdaten des Projektteams werden nicht veröffentlicht.</p>
         </div>
         <div class="imprint-grid">
-          <div class="imprint-card" data-reveal><h3>Medieninhaber &amp; Betreiber</h3><p>Projektname / Schule / Organisation<br>Musterstraße 1<br>0000 Musterort<br>Österreich</p><p>E-Mail: kontakt@example.at<br>Telefon: +43 000 000000</p></div>
-          <div class="imprint-card" data-reveal><h3>Haftung &amp; Datenschutz</h3><p>Verantwortlich für den Inhalt: Vorname Nachname. Angaben zu Haftung, Urheberrecht, externen Links, verwendeten Diensten und Datenschutz werden vor dem Livegang ergänzt.</p><p><strong>Hinweis:</strong> Dieser Bereich ist ein Design-Platzhalter und keine Rechtsberatung.</p></div>
+          <div class="imprint-card" data-reveal>
+            <h3>Medieninhaber &amp; Betreiber</h3>
+            <p><strong>Höhere Technische Bundeslehranstalt Wien 3 Rennweg (HTL 3 Rennweg)</strong><br>Rennweg 89b<br>1030 Wien<br>Österreich</p>
+            <p>E-Mail: <a href="mailto:direktion@htl.rennweg.at">direktion@htl.rennweg.at</a><br>Telefon: +43 1 242 15-10</p>
+            <p><a href="https://www.htl.rennweg.at" target="_blank" rel="noopener">www.htl.rennweg.at ↗</a></p>
+          </div>
+          <div class="imprint-card" data-reveal>
+            <h3>Projekt &amp; rechtliche Hinweise</h3>
+            <p><strong>Projekt:</strong> Path of Noesis – Enterprise Network Lab<br><strong>Art:</strong> Diplomarbeit<br><strong>Schule:</strong> HTL 3 Rennweg</p>
+            <p>Die Inhalte dieser Projektwebsite dienen der Präsentation und Dokumentation der Diplomarbeit. Für Datenschutz, Urheberrecht, Haftungsausschlüsse und weitere schulbezogene rechtliche Hinweise gelten die jeweils aktuellen Vorgaben der HTL 3 Rennweg.</p>
+            <p>Die verwendeten Geräteabbildungen und sonstigen externen Inhalte sind nur im Rahmen der jeweiligen Nutzungsrechte einzusetzen.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="container footer-row"><span>© <span id="year"></span> Path of Noesis</span><span class="mono">ENTERPRISE · NETWORKING · NOESIS</span></div></footer>
+  <footer><div class="container footer-row"><span>© <span id="year"></span> Path of Noesis · Diplomarbeit · HTL 3 Rennweg</span><span class="mono">ENTERPRISE · NETWORKING · NOESIS</span></div></footer>
 
   <script>
     const menuBtn = document.getElementById('menuBtn');
